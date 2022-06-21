@@ -1,0 +1,35 @@
+package com.marondal.servlet.ex;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ServletEx01Controller extends HttpServlet{
+	
+	@Override
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		// text/css MIME 데이터의 타입
+		response.setContentType("text/plain");
+		// 캐릭터셋, 인코딩 유니코드
+		response.setCharacterEncoding("utf-8");
+		
+		// 현재 날짜와 시간을 보여주는 페이지
+		Date now = new Date();
+		
+		PrintWriter out = response.getWriter();
+		out.println(now);
+		
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy년 M월 d일 HH시 mm분 ss초");
+		String dateString = formatter.format(now);
+		out.println(dateString);
+		
+	}
+	
+	
+
+}

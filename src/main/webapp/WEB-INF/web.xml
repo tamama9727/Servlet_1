@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Servlet_1</display-name>
+  
+  <servlet>
+  	<servlet-name>Hello</servlet-name>
+  	<servlet-class>com.marondal.test.HelloController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Hello</servlet-name>
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 예제 url 1번 mapping -->
+  <servlet>
+  	<servlet-name>ex01</servlet-name>
+  	<servlet-class>com.marondal.servlet.ex.ServletEx01Controller</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ex01</servlet-name>
+  	<url-pattern>/servlet/ex01</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 연습문제 1번  -->
+  <servlet>
+  	<servlet-name>quiz01</servlet-name>	
+  	<servlet-class>com.marondal.servlet.quiz.ServletQuiz01Controller</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>quiz01</servlet-name>
+  	<url-pattern>/servlet/quiz01</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 연습문제 2번 -->
+    <servlet>
+  	<servlet-name>quiz02</servlet-name>	
+  	<servlet-class>com.marondal.servlet.quiz.ServletQuiz02Controller</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>quiz02</servlet-name>
+  	<url-pattern>/servlet/quiz02</url-pattern>
+  </servlet-mapping>
+  
+    <!-- 연습문제 3번 -->
+    <servlet>
+  	<servlet-name>quiz03</servlet-name>	
+  	<servlet-class>com.marondal.servlet.quiz.ServletQuiz03Controller</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>quiz03</servlet-name>
+  	<url-pattern>/servlet/quiz03</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+</web-app>
