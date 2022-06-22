@@ -2,7 +2,9 @@ package com.marondal.servlet.quiz;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.annotation.WebServlet;
@@ -40,6 +42,8 @@ public class ServletQuiz10Controller extends HttpServlet{
 			out.println("<h1>" + userMap.get("name") + "님 환영합니다.</h1>");
 		}
 		out.println("</body> </html>");
+		
+		List<String>animalList = new ArrayList<>();
 	}
 	
 
