@@ -10,17 +10,16 @@
 	<%
 	
 
-	
+		
 		int centimeter = Integer.parseInt(request.getParameter("centimeter"));
-	
+		//변환할 단위 여러개
 		String[] option = request.getParameterValues("option");
+			
 		
-		String[] centimeterArray = request.getParameterValues("centimeter");	
-		
-		String centimeterString = "";
+/* 		String centimeterString = "";
 		for(int i = 0; i < centimeterArray.length; i++) {
 			centimeterString += centimeterArray[i] + " ";
-		}
+		} */
 		
 		
 		double result = 0;
@@ -44,7 +43,7 @@
 		<h1>변환 결과</h1>
 		<h1><%=centimeter%>cm</h1>
 		<hr>
-		<h1><%=centimeterString %></h1>
+		<h1><%= %></h1>
 
 	</div>
 

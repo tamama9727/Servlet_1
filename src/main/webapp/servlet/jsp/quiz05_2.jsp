@@ -17,8 +17,7 @@
 					<label>인치<input type="checkbox" name="option" value="인치"> </label>
 					<label>야드<input type="checkbox" name="option" value="야드"></label>
 					<label>피트<input type="checkbox" name="option" value="피트"></label>
-					<label>미터<input type="checkbox" name="option" value="미터"></label>
-				
+					<label>미터<input type="checkbox" name="option" value="미터"></label>		
 				</div>
 				
 			
