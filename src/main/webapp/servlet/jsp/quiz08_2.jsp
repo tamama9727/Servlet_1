@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>도서목록</title>
+<title>Insert title here</title>
 	     <!-- bootstrap CDN link -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
             
@@ -15,9 +15,9 @@
 
         <!-- 외부 스타일시트 정의-->
 </head>
+<body>
 
 	<%
-	
     List<Map<String, Object>> list = new ArrayList<>();
     Map<String, Object> map = new HashMap<String, Object>() {
         { 
@@ -62,44 +62,34 @@
         } 
     };
     list.add(map);
+    
+    int bookId = Integer.parseInt(request.getParameter("book_id"));
+    
 	
 	%>
 
-
-<body>
 	<div class = "container">
-		<h1 class = "text-center">책 목록</h1>
-		<form method = "get">
-			<table class = "table text-center">
-			<thead>
-				<tr>
-					<th>id</th>
-					<th>표지</th>
-					<th>제목</th>
-				</tr>
-			<thead>
+	
+		<%for(Map<String, Object> book : list){
+				
+			int id = (Integer)book.get("id");
+			if(bookId == id){
+				
 			
-			<tbody>
-			<%--리스트에서 책 정보 하나씩 꺼내기 --%>
-			<%for(Map<String, Object> book : list){
-			
-			%>
-				<tr>
-					<td><%= book.get("id") %></td>
-					<td>
-						<img width="100" src = "<%= book.get("image") %>"></img>
-					</td>
-					<td class = "dispaly-4">
-						<a href = "http://localhost:8080/Servlet_1/servlet/jsp/quiz08_2.jsp?book_id=<%=book.get("id")%>">
-							<%=book.get("title") %>
-						</a>
-					</td>
-				</tr>
-			<%} %>
-			</tbody>
-			</table>
 		
-		</form>
+			%>
+		<div class = "d-flex">
+			<div>
+				<img width = "300" src="<%=book.get("image") %>">
+			</div>
+			<div>
+				<div class = "display-1 font-weight-bold"><%=book.get("title") %></div>
+				<div class ="display-3 text-info"><%=book.get("author") %></div>
+				<div class = "display-4 text-secondary"><%=book.get("publisher") %></div>
+			</div>
+		</div>
+		<%	}
+		} %>
 	</div>
 
 </body>
