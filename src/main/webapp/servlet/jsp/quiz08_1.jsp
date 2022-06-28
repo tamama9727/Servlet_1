@@ -90,7 +90,7 @@
 						<img width="100" src = "<%= book.get("image") %>"></img>
 					</td>
 					<td class = "dispaly-4">
-						<a href = "http://localhost:8080/Servlet_1/servlet/jsp/quiz08_2.jsp?book_id=<%=book.get("id")%>">
+						<a href = "http://localhost:8080/Servlet_1/servlet/jsp/quiz08_2.jsp?book_id=<%=book.get("id") %>">
 							<%=book.get("title") %>
 						</a>
 					</td>
